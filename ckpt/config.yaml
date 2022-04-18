@@ -5,5 +5,6 @@ user:
 
 lr: !!float 1e-3
 epoch: 200    
-    
+dataset:
+    data: './dataset/data.npy'
 ...    

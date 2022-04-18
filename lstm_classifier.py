@@ -30,7 +30,7 @@ with open('./ckpt/config.yaml') as f:
     print(config)
 
 ##准备数据集函数，列出模型。
-data_shuffle = np.load('./dataset/data.npy')
+data_shuffle = np.load(config['dataset']['data'])
 labels_shuffle = np.load('./dataset/label.npy')
 
 class AborptionDataset(Dataset):
