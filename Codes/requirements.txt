@@ -1,0 +1,10 @@
+tqdm
+pandas
+xlrd
+numpy>=1.19.2
+torchaudio>=0.6.0
+torch>=1.6.0
+fairseq
+wavencoder
+scipy
+scikit-learn
