@@ -71,6 +71,7 @@ class_num = 2
 model = nn.Sequential(
     #Wav2Vec(pretrained=True),
     nn.Conv1d(1, 4, 1),
+    nn.ReLU(),
     LSTM_Attn_Classifier(4, 8, class_num)
 )
 print(model)
