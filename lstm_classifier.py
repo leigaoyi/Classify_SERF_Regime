@@ -22,6 +22,8 @@ import numpy as np
 #import matplotlib.pyplot as plt 
 import yaml
 
+import pickle
+
 ## 导入数据集，自定义
 #from read_excel import labels_shuffle, data_shuffle
 
@@ -105,4 +107,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=config['lr'])
 #scheduler = torch.optim.lr_scheduler.CyclicLR(optimizer, base_lr=1e-4, max_lr=1e-1, step_size_up=10)
 model, train_dict = train(model, trainloader, valloader, n_epochs=config['epoch'],\
                           optimizer=optimizer)
-
+file = open('./ckpt/train_dict.pickle', 'wb')
+pickle.dump(train_dict)
+file.close()
+      
